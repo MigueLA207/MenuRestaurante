@@ -1,0 +1,221 @@
+/* ========================
+   1. Variables
+   ======================== */
+:root {
+  --color-principal: #1D4B6E;
+  --color-secundario: #FA8C2A;
+  --color-texto: white;
+  --color-fondo: #0C1F2D;
+  --fuente-principal: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* ========================
+   2. Reset / Normalize
+   ======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* ========================
+   3. Estilos Generales
+   ======================== */
+h1 {
+  color: var(--color-texto);
+  text-align: center;
+  padding: 1rem;
+}
+
+button {
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 500ms ease;
+
+}
+
+button:hover {
+  background-color: #8e4c12;
+
+}
+
+/* ========================
+   4. Layouts Principales
+   ======================== */
+.Header {
+  position: relative;
+  background-image: url("imagenes/banner.png");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+main {
+  padding: 2rem;
+  height: 100%;
+}
+
+
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-principal);
+  padding: 1rem;
+  text-align: center;
+  z-index: 1;
+}
+
+a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  color: var(--color-texto);
+}
+
+
+.Header {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("imagenes/banner.png");
+  background-size: cover;
+  background-position: center;
+  padding: 15px 0px 15px 0px;
+}
+
+.Header__title {
+  color: white;
+  font-size: 40px;
+}
+
+
+.navbar {
+  background-color: var(--color-principal);
+  position: fixed;
+  width: 100%;
+  flex-wrap: wrap;
+  bottom: 0;
+  height: min-content;
+  border-top: var(--color-secundario) 3px solid;
+  z-index: 2;
+}
+
+.navbar__list {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.information {
+  background-color: var(--color-principal);
+  padding: 15px;
+  text-align: center;
+}
+
+.information__call,
+.information__writeUs {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.information__open {
+  background-color: var(--color-secundario);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.menu__category {
+  background-color: var(--color-principal);
+  width: 400px;
+  margin: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu__catgory__information{
+  padding-left: 10px;
+}
+
+.menu__tittle {
+  width: 100%;
+  text-align: center;
+  margin: 15px;
+  padding-top: 20px;
+  border-top: var(--color-texto) 2px solid; 
+}
+
+
+
+.menu__name{
+  margin:0px 0px 10px 0px;
+  border-bottom: 2px var(--color-secundario) solid;
+  width: fit-content;
+}
+
+.menu__price{
+  padding-top: 8px;
+  font-size: 16px;
+}
+
+.footer{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-secundario);
+    border-top: 2px var(--color-principal) solid ;
+}
+
+.footer__container{
+  display: flex;
+}
+
+.footer__right{
+  display: flex;
+  justify-content: end;
+}
+
+.floatMenu{
+  position: fixed;
+  top: 0;
+  background-color: var(--color-secundario);
+  /* padding: 6px; */
+  margin: 7px;
+  border: #1D4B6E solid 1px;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+@media (max-width: 905px) {
+  .menu__category {
+    width: 100%;
+  }
+
+  main {
+    padding: 0px;
+  } 
+}
+
+
